@@ -1,0 +1,43 @@
+.content {
+		display: flex;
+		height: 100upx;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #fff;
+	}
+	.tabBarIndex{
+		width: 100%;
+		white-space: nowrap;
+		line-height: 100upx;
+		height: 100upx;
+		border-bottom: 1upx solid #EEEEEE;
+	}
+	.tabBarList{
+		margin-left: 10px;
+		margin-right: 20upx;
+		font-size: 30upx;
+		display: inline-block;
+		text-align: center;
+		white-space: nowrap;
+		color: #969696;
+		font-weight: bold;
+	}
+	.active .swiper-tab-line{
+		border-bottom: 6upx solid #F0AD4E;
+		width: 70upx;
+		margin: auto;
+		border-top: 6upx solid #F0AD4E;
+		border-radius: 20upx;
+	}
+	.content .active{
+		color: #F0AD4E;
+		font-size: 40upx;
+	}
+	.uni-view-video{
+		width: 100%;
+		margin-top: 150upx;
+	}
+	page {
+		background-color: #000;
+	}

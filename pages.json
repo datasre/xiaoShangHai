@@ -1,0 +1,110 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"backgroundColor":"#000000",
+				"navigationBarTitleText": "心动",
+				"enablePullDownRefresh": true,
+				"app-plus":{
+					"scrollIndicator":"none",
+					"bounce":"none",
+					"titleNView":false
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/find/find",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "发现",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/news/news",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "消息",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "登录页面",
+                "enablePullDownRefresh": false,
+				"style": {
+					"backgroundColor":"#000000",
+					"navigationBarTitleText": "心动",
+					"enablePullDownRefresh": true,
+					"app-plus":{
+						"scrollIndicator":"none",
+						"bounce":"none",
+						"titleNView":false
+					}
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/register/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+		"color":"#B5B5B5",
+		"selectedColor":"#FEE42B",
+		"borderStyle":"black",
+		"backgroundColor":"#ccc",
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"text":"心动",
+				"iconPath":"/static/tabbar/index.png",
+				"selectedIconPath":"/static/tabbar/indexed.png"
+			},
+			{
+				"pagePath":"pages/find/find",
+				"text":"发现",
+				"iconPath":"/static/tabbar/find.png",
+				"selectedIconPath":"/static/tabbar/finded.png"
+			},
+			{
+				"pagePath":"pages/news/news",
+				"text":"消息",
+				"iconPath":"/static/tabbar/news.png",
+				"selectedIconPath":"/static/tabbar/newsed.png"
+			},
+			{
+				"pagePath":"pages/home/home",
+				"text":"我的",
+				"iconPath":"/static/tabbar/home.png",
+				"selectedIconPath":"/static/tabbar/homeed.png"
+			}
+		]
+	}
+}
