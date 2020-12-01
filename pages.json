@@ -1,5 +1,5 @@
 {
-	"pages": [
+	"pages": [ 
 		{
 			"path": "pages/index/index",
 			"style": {
@@ -47,9 +47,6 @@
                 "navigationBarTitleText": "登录页面",
                 "enablePullDownRefresh": false,
 				"style": {
-					"backgroundColor":"#000000",
-					"navigationBarTitleText": "心动",
-					"enablePullDownRefresh": true,
 					"app-plus":{
 						"scrollIndicator":"none",
 						"bounce":"none",
@@ -63,7 +60,15 @@
             "path" : "pages/register/register",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "注册页面",
+                "enablePullDownRefresh": false
+            }
+        }
+        ,{
+            "path" : "pages/loginForm/loginForm",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "登录表单",
                 "enablePullDownRefresh": false
             }
             
