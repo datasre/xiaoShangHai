@@ -7,28 +7,28 @@
 		   			<view class="portraitImgBox">
 		   				<image 
 							class="portrait"  
-							style="width: 150upx; height: 150upx;" 
+							style="width: 100upx; height: 100upx;" 
 							:src="headPortrait"
 							@click="upload"
 						>
 						</image>
-						<text style="font-size: 10upx;">上传头像</text>
+						<text style="font-size: 10upx; margin-top: 30upx;">上传头像</text>
 		   			</view>
 		   	   </view>
 		   		<form @submit="handleRegisterFormSubmit" class="registerForm">
 		   			<label for="phoneNumber">
 		   				手机号码
-		   				<input id="phoneNumber" name="phoneNumber" type="number" v-model="phoneNumber" />
+		   				<input class="input-border-bottom" id="phoneNumber" name="phoneNumber" type="number" v-model="phoneNumber" />
 		   			</label>
 		   			<label for="nickName">
 		   				昵称
-		   				<input id="nickName" name="nickName" type="text" v-model="nickName" />
+		   				<input class="input-border-bottom" id="nickName" name="nickName" type="text" v-model="nickName" />
 		   			</label>
 		   			<label for="passWord">
 		   				输入密码
-		   				<input id="passWord" name="passWord" type="text" v-model="passWord" />
+		   				<input class="input-border-bottom" id="passWord" name="passWord" type="text" v-model="passWord" />
 		   			</label>
-		   			<button form-type="submit">注册</button>
+		   			<button form-type="submit" style="margin-top: 100upx; background-color: #F0AD4E;">注册</button>
 		   		</form>
 		   </view>
 		</template>
@@ -40,7 +40,7 @@
 	export default {
 		data() {
 			return {
-				headPortrait:'../../static/img/photoLogo.jpg',
+				headPortrait:'../../static/img/photoLogo.png',
 				phoneNumber:'',
 				nickName:'',
 				passWord:''
@@ -82,41 +82,5 @@
 </script>
 
 <style>
-	.register{
-		position: relative;
-		left: 0;
-		bottom: -740upx;
-		display:flex ;
-		flex-direction:column;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		background-color: #fff;
-		border: 1upx #fff;
-		border-radius: 15%;
-		height: 800upx;
-	}
-	.portrait-box{
-		display: flex;
-		flex-direction: row;
-		flex-wrap:nowrap;
-		justify-content:space-around;
-		align-items:center
-	}
-	.portraitImgBox{
-		display: flex;;
-		flex-direction: column;
-		flex-wrap:nowrap;
-		align-items:center
-	}
-	.registerForm{
-		display: flex;
-		flex-direction: column;
-		flex-wrap:nowrap;
-		align-items:center;
-		width: 100%;
-	}
-	page{
-		height: 100%;
-		background: url(../../static/img/longin.jpg);
-	}
+	@import "register.css";
 </style>

@@ -45,6 +45,7 @@
 		top:1180upx;
 		position: flex;
 		width: 80%;
+		background-color: #F0AD4E;
 	}
 	page{
 		height: 100%;
