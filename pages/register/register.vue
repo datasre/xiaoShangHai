@@ -40,7 +40,7 @@
 	export default {
 		data() {
 			return {
-				headPortrait:'../../static/img/photoLogo.png',
+				headPortrait:'',
 				phoneNumber:'',
 				nickName:'',
 				passWord:''

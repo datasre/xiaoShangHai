@@ -54,21 +54,6 @@
 							case 'qq':
 								providerName = 'QQ登录';
 								break;
-							case 'sinaweibo':
-								providerName = '新浪微博登录'
-								break;
-							case 'xiaomi':
-								providerName = '小米登录'
-								break;
-							case 'alipay':
-								providerName = '支付宝登录'
-								break;
-							case 'baidu':
-								providerName = '百度登录'
-								break;
-							case 'toutiao':
-								providerName = '头条登录'
-								break;
 							case 'apple':
 								providerName = '苹果登录'
 								break;
@@ -94,81 +79,62 @@
 			},
 			// qq登录第三方接口
 			qqLogin(){
-				
+				// 获取服务商
+				uni.getProvider({
+				  service: 'oauth',
+				  success: function (res) {
+				    console.log(res.provider);
+				      if (~res.provider.indexOf('qq')) {
+				      uni.login({
+				        provider: 'qq',
+				        success: function (res) {
+				          console.log(JSON.stringify(res));
+				          // 此时可以获取到code、openid、unionid、
+				          // 获取用户信息	
+				          uni.getUserInfo({
+				            provider: 'qq',
+				      　　   success: function (infoRes) {
+				              console.log(JSON.stringify(infoRes));
+				          　　 console.log('用户昵称为：' + infoRes.userInfo.nickName);
+				            }
+				          });
+				        }
+				      });
+				    }
+				  }
+				});
 			},
 			// 微信登录第三方接口
 			weixinLogin(){
-				
+				// 获取服务商
+				uni.getProvider({
+				  service: 'oauth',
+				  success: function (res) {
+				    console.log(res.provider)
+				      if (~res.provider.indexOf('weixin')) {
+				      uni.login({
+				        provider: 'weixin',
+				        success: function (res) {
+				          console.log(JSON.stringify(res));
+				          // 此时可以获取到code、openid、unionid、
+				          // 获取用户信息                                
+				          uni.getUserInfo({
+				            provider: 'weixin',
+				      　　   success: function (infoRes) {
+				              console.log(JSON.stringify(infoRes));
+				          　　 console.log('用户昵称为：' + infoRes.userInfo.nickName);
+				            }
+				          });
+				        }
+				      });
+				    }
+				  }
+				});
 			}
 		}
 	}
 </script>
 
 <style>
-	.register{
-		position: relative;
-		left: 0;
-		bottom: -740upx;
-		display:flex ;
-		flex-direction:column;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		background-color: #fff;
-		border: 1upx #fff;
-		border-radius: 15%;
-		height: 800upx;
-	}
-	.phoneNumberMessage{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		flex-wrap:nowrap;
-		align-items:center;
-		margin-bottom: 100upx;
-		font-size: 40upx;
-	}
-	.textFlex{
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		height: 20%;
-		padding-left: 80upx;
-		font-weight: bold;
-		font-size: 30px;
-	}
-	.registerForm{
-		display: flex;
-		flex-direction: column;
-		flex-wrap:nowrap;
-		align-items:center;
-		justify-content: space-around;
-		width: 100%;
-		height: 55%;
-		font-weight: bold;
-		font-size: 13upx;
-	}
-	.otherLogin{
-		color: #ccc;
-		margin-top: 30upx;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-	}
-	.iconText{
-		margin-top: 30upx;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-	}
-	.iconfont{
-		font-size: 50upx;
-	}
-	.icon-weixin{
-		color: #4CD964;
-	}
-	page{
-		height: 100%;
-		background: url(../../static/img/longin.jpg);
-	}
+
 </style>

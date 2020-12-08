@@ -1,40 +1,33 @@
 <template>
-	<view class="">
-		<view class="content">
-			<scroll-view class="tabBarIndex" scroll-x>
-				<block v-for="(tab,index) in tabBars" :key="tab.id">
-					<view 
-						class="tabBarList" 
-						:class="{'active' : tabIndex==index}"
-						@click = "tabtap(index)"
-					>
-						{{tab.name}} {{tab.num?tab.num:""}}
-					<view class="swiper-tab-line"></view>
-					</view>
-				</block>
-			</scroll-view>
-		</view>
-		<view class="">
-			<view>
-				<image class="uni-view-video" :style="{height:0.7*swiperheight+'px'}" src="../../static/video/1.png" mode=""></image>
+	<view class="u-f-column" style="width: 100%;">
+		<uniStatusBar></uniStatusBar>
+		<view class="u-f-column">
+			<swiperTabHead :tabBars="tabBars" :tabIndex="tabIndex" @tabtap="tabtap(index)"></swiperTabHead>
+			<view class="index-viedo">
+				<image src="../../static/video/1.png" mode="widthFix" lazy-load></image>
 			</view>
-			<view class="msg">
-				<view class="">
-					
+			<view class="u-f-ac index-introduce">
+				<view class="u-f-column">
+					<view>朴智恩</view>
+					<view>21岁 上海市 天蝎座</view>
 				</view>
-				<view class="">
-					
-				</view>
+				<button type="default">加好友</button>
+			</view>
+			<view class="u-f index-zan">
+				<image src="../../static/video/1.png" mode="widthFix" lazy-load></image>
+				<view>以获得68个赞，收到180</view>
 			</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	import uniStatusBar from "../../components/uni-status-bar/uni-status-bar.vue";
+	import swiperTabHead from "../../components/index/swiper-tab-head.vue";
 	export default {
 		data() {
 			return {
-				tabIndex:0,// 选中的
+				tabIndex:1,// 选中的
 				swiperheight:500,
 				tabBars: [
 					{ name : "推荐",id: "recommend"},
@@ -42,7 +35,16 @@
 					{ name : "新人",id: "newPeople"},
 					{ name : "健身达人",id: "Fitness"}
 				],
-				newsList:[]//每页里面的数据,调用接口来获取数据
+				newsList:[
+					{
+						loadtext:'上拉加载更多',
+						list:[
+							{
+								
+							}
+						]
+					}
+				]//每页里面的数据,调用接口来获取数据
 			}
 		},
 		onLoad() {
@@ -59,10 +61,16 @@
 				}
 			})
 		},
+		
 		methods: {
 			tabtap(index){
+				console.log(index);
 				this.tabIndex = index;
 			}
+		},
+		components:{
+			uniStatusBar,
+			swiperTabHead
 		}
 	}
 </script>

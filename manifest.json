@@ -56,13 +56,13 @@
                 "ad" : {},
                 "oauth" : {
                     "apple" : {},
+                    "qq" : {
+                        "appid" : "1111189115"
+                    },
                     "weixin" : {
                         "appid" : "wxfb9e1f805d817a59",
                         "appsecret" : "",
                         "UniversalLinks" : ""
-                    },
-                    "qq" : {
-                        "appid" : "1111189115"
                     }
                 }
             }

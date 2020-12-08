@@ -31,24 +31,5 @@
 </script>
 
 <style>
-	.login-page{
-		position: relative;
-	}
-	.login-button1{
-		width: 80%;
-		position: flex;
-		text-align: center;
-		top:1400upx;
-	}
-	.login-button2{
-		text-align: center;
-		top:1180upx;
-		position: flex;
-		width: 80%;
-		background-color: #F0AD4E;
-	}
-	page{
-		height: 100%;
-		background: url(../../static/img/longin.jpg);
-	}
+	
 </style>

@@ -1,48 +1,28 @@
 {
 	"pages": [ 
 		{
-		    "path" : "pages/login/login",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "登录页面",
-		        "enablePullDownRefresh": false,
-				"style": {
-					"app-plus":{
-						"scrollIndicator":"none",
-						"bounce":"none",
-						"titleNView":false
-					}
-				}
-		    }
-		},
-		{
 			"path": "pages/index/index",
 			"style": {
-				"backgroundColor":"#000000",
-				"navigationBarTitleText": "心动",
-				"enablePullDownRefresh": true,
 				"app-plus":{
 					"scrollIndicator":"none",
 					"bounce":"none",
+					"navigationStyle":"custom",
 					"titleNView":false
 				}
 			}
 		}
 	    ,{
             "path" : "pages/find/find",
-            "style" :                                                                                    
+            "style" :
             {
-                "navigationBarTitleText": "发现",
-                "enablePullDownRefresh": false
+                
             }
-            
         }
         ,{
             "path" : "pages/home/home",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "我的",
-                "enablePullDownRefresh": false
+                
             }
             
         }
@@ -50,25 +30,36 @@
             "path" : "pages/news/news",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "消息",
-                "enablePullDownRefresh": false
+                
             }
             
-        }
-        ,{
+        },
+		{
+		    "path" : "pages/login/login",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "登录页面",
+		        "enablePullDownRefresh": false,
+				"style": {
+					"app-plus":{
+						// 禁止原生导航
+						"titleNView":false
+					}
+				}
+		    }
+		},
+		{
             "path" : "pages/register/register",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "注册页面",
-                "enablePullDownRefresh": false
+               
             }
         }
         ,{
             "path" : "pages/loginForm/loginForm",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "登录表单",
-                "enablePullDownRefresh": false
+
             }
             
         }
@@ -83,7 +74,12 @@
 		"color":"#B5B5B5",
 		"selectedColor":"#FEE42B",
 		"borderStyle":"black",
-		"backgroundColor":"#ccc",
+		"backgroundColor":"#000",
+		"midButton":{
+			"iconPath":"/static/tabbar/huaban.png",
+			"height":"45px",
+			"iconWidth":"40px"
+		},
 		"list":[
 			{
 				"pagePath":"pages/index/index",
